@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>马丽亚品牌研究院 | 企业品牌信任资产与AI可见度诊断</title>
+    <meta
+      name="description"
+      content="马丽亚品牌研究院企业品牌信任资产与AI可见度诊断。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen screen-intro is-active" data-screen="intro">
+        <div class="hero-panel">
+          <img
+            src="./assets/diagnostic-hero.png"
+            alt="品牌信任度与AI可见度诊断视觉"
+            class="hero-art"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="brand-pill">方法论支持：马丽亚品牌研究院</div>
+            <h1>企业品牌资产诊断</h1>
+            <p class="hero-subtitle">品牌信任 × AI可见度</p>
+            <p class="hero-copy">
+              让企业真实价值被看见、被信任、被选择。
+            </p>
+            <p class="event-copy">3分钟｜8道题｜结果仅本人查看</p>
+          </div>
+        </div>
+
+        <form class="start-card" id="profileForm">
+          <label class="field">
+            <span>企业/品牌名称</span>
+            <input
+              id="brandName"
+              name="brandName"
+              type="text"
+              autocomplete="organization"
+              placeholder="请输入企业或品牌名称"
+              maxlength="30"
+            />
+          </label>
+          <label class="field">
+            <span>您最关注哪一项？</span>
+            <select id="stage" name="stage">
+              <option value="客户信任">客户信任</option>
+              <option value="渠道合作">渠道合作</option>
+              <option value="品牌表达">品牌表达</option>
+              <option value="AI可见">AI可见</option>
+            </select>
+          </label>
+          <button class="primary-btn" type="submit">
+            开始诊断
+          </button>
+        </form>
+      </section>
+
+      <section class="screen screen-quiz" data-screen="quiz">
+        <header class="topbar">
+          <button class="ghost-btn icon-btn" type="button" id="backBtn" aria-label="返回上一题">
+            ‹
+          </button>
+          <div class="progress-wrap" aria-label="答题进度">
+            <div class="progress-label">
+              <span id="stepText">1 / 8</span>
+              <span id="axisText">信任资产</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+        </header>
+
+        <article class="question-card">
+          <p class="question-kicker" id="questionKicker">Trust Signal</p>
+          <h2 id="questionTitle"></h2>
+          <div class="options" id="options"></div>
+        </article>
+      </section>
+
+      <section class="screen screen-result" data-screen="result">
+        <header class="result-hero">
+          <button class="ghost-btn small" type="button" id="restartBtn">重测</button>
+          <div>
+            <p class="eyebrow">您的企业品牌资产诊断摘要已生成</p>
+            <h2 id="resultTitle"></h2>
+          </div>
+          <div class="score-orb">
+            <strong id="totalScore">0</strong>
+            <span>总分</span>
+          </div>
+        </header>
+
+        <section class="score-grid" aria-label="诊断分数">
+          <div class="score-card">
+            <div class="score-row">
+              <span>综合品牌资产分</span>
+              <strong id="overallScore">0</strong>
+            </div>
+            <div class="meter"><span id="overallMeter"></span></div>
+          </div>
+          <div class="score-card">
+            <div class="score-row">
+              <span>品牌信任资产</span>
+              <strong id="trustScore">0</strong>
+            </div>
+            <div class="meter"><span id="trustMeter"></span></div>
+          </div>
+          <div class="score-card">
+            <div class="score-row">
+              <span>AI可见资产</span>
+              <strong id="aiScore">0</strong>
+            </div>
+            <div class="meter"><span id="aiMeter"></span></div>
+          </div>
+        </section>
+
+        <section class="insight-band">
+          <p id="resultSummary"></p>
+        </section>
+
+        <section class="action-section">
+          <h3>优先补强方向</h3>
+          <div class="loss-list" id="lossList"></div>
+        </section>
+
+        <section class="scenario-card">
+          <h3>AI可见度场景说明</h3>
+          <p id="aiScenario"></p>
+          <div class="scenario-note">
+            本诊断不评价企业好坏，只帮助判断企业真实价值是否已经沉淀为客户信任资产、渠道合作资产和AI可见资产。
+          </div>
+        </section>
+
+        <section class="action-section">
+          <h3>建议优先整理的信息资产</h3>
+          <div class="action-list" id="actionList"></div>
+        </section>
+
+        <section class="lead-card">
+          <div>
+            <h3>申请会后人工初筛</h3>
+            <p>本场会议开放20家企业会后人工初筛名额。马丽亚品牌研究院将结合您的诊断结果与企业公开信息，人工核验品牌表达、信任资产和AI可见度基础，并反馈《企业品牌关键信息资产缺口摘要》。</p>
+            <p class="privacy-note">信息仅用于本次会后诊断沟通，不公开、不排名、不对外展示。名额将结合企业需求完整度与提交顺序确认。</p>
+          </div>
+          <form id="leadForm" class="lead-form">
+            <label class="field">
+              <span>姓名</span>
+              <input id="leadName" type="text" placeholder="你的名字" maxlength="20" />
+            </label>
+            <label class="field">
+              <span>企业名称</span>
+              <input id="leadCompany" type="text" placeholder="企业或品牌名称" maxlength="40" />
+            </label>
+            <label class="field">
+              <span>职务</span>
+              <input id="leadRole" type="text" placeholder="例如：董事长 / 总经理 / 品牌负责人" maxlength="30" />
+            </label>
+            <label class="field">
+              <span>微信/手机号</span>
+              <input id="leadContact" type="text" placeholder="方便联系即可" maxlength="30" />
+            </label>
+            <label class="field">
+              <span>当前最想解决的品牌问题</span>
+              <select id="leadIssue">
+                <option value="客户理解不够快">客户理解不够快</option>
+                <option value="企业优势表达不统一">企业优势表达不统一</option>
+                <option value="客户案例和信任背书不足">客户案例和信任背书不足</option>
+                <option value="官网/媒体/公众号信息较分散">官网/媒体/公众号信息较分散</option>
+                <option value="AI搜索或问答中企业信息不准确">AI搜索或问答中企业信息不准确</option>
+                <option value="渠道招商或合作转化需要提升">渠道招商或合作转化需要提升</option>
+                <option value="创始人故事和企业品牌故事需要系统化">创始人故事和企业品牌故事需要系统化</option>
+              </select>
+            </label>
+            <button class="primary-btn" type="submit">申请人工初筛名额</button>
+          </form>
+          <div class="consult-box" id="consultBox" hidden>
+            <h3>已收到您的申请</h3>
+            <p>会后1-3个工作日内，马丽亚品牌研究院顾问将与您确认沟通时间。</p>
+            <p>建议提前准备：企业介绍PPT、官网或公众号链接、核心产品资料、客户案例、荣誉资质或媒体报道材料。</p>
+            <p id="consultText"></p>
+            <div class="button-row">
+              <button class="secondary-btn" type="button" id="copyBtn">保存摘要</button>
+              <button class="secondary-btn" type="button" id="returnBtn">返回诊断摘要</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
