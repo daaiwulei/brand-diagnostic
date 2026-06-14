@@ -361,7 +361,7 @@ function saveLead(name, contact) {
     "Q1答案": getAnswerText(0),
     "Q2答案": getAnswerText(1),
     "Q3答案": getAnswerText(2),
-    "Q3答案": getAnswerText(3),
+    "Q4答案": getAnswerText(3),
     "Q5答案": getAnswerText(4),
     "Q6答案": getAnswerText(5),
     "Q7答案": getAnswerText(6),
